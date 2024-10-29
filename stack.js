@@ -33,4 +33,18 @@ class stack {
     isEmpty() {
         return this.size === 0; 
     }
+
+    sort() {
+        const tempStack = [];
+        while (odlStack.length) {
+            const temp = this.stack.pop();
+            while (tempStack.length > 0 && tempStack[tempStack.length - 1] > temp) {
+                this.stack.push(tempStack.pop())
+            }
+            tempStack.push(temp)
+        }
+        while (tempStack.length) {
+            this.stack.push(tempStack.pop());
+        }
+    }
 }
