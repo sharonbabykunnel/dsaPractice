@@ -20,18 +20,18 @@ class BST{
 
     }
 
-    _insert(root, val) {
-        if (root.val < val) {
+    _insert(root, node) {
+        if (root.val < node.val) {
             if (!root.left) {
                 root.left = node;
             } else {
-                this._insert(root.left, val);
+                this._insert(root.left, node);
             }
         } else {
             if (root.right) {
                 root.right = node;
             } else {
-                this._insert(root.right, val);
+                this._insert(root.right, node);
             }
         }
     }

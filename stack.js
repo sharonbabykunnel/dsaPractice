@@ -36,7 +36,7 @@ class stack {
 
     sort() {
         const tempStack = [];
-        while (odlStack.length) {
+        while (this.stack.length) {
             const temp = this.stack.pop();
             while (tempStack.length > 0 && tempStack[tempStack.length - 1] > temp) {
                 this.stack.push(tempStack.pop())

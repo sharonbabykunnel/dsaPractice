@@ -10,6 +10,7 @@ class LinkedList{
         this.head = null;
         this.tail = null;
         this.size = 0
+        this.ful = false;
     }
 
     isEmpty() {
@@ -18,7 +19,7 @@ class LinkedList{
 
     append(value){
         const node = new Node(value);
-        if (this.isEpmty()) {
+        if (this.isEmpty()) {
             this.head = node;
             this.tail = node;
         } else {
