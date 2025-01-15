@@ -99,4 +99,17 @@ class Graph {
     return false;
   }
 
+  _isCyclic(start, visited, perant) {
+    visited[start] = true;
+    for (let neighbor of this.adjacencyList[start]) {
+      if (!visited[neighbor]) {
+        if (this._isCyclic(neighbor, visited, start)) {
+          return true;
+        }
+      } else if (neighbor !== perant) {
+        return true;
+      }
+    }
+    return false;
+  }
 }
