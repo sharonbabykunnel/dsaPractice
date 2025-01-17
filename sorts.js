@@ -9,3 +9,7 @@ const bubble = () => {
 const selection = () => {
     
 }
+
+const insertion = () => {
+    
+}
