@@ -10,3 +10,6 @@ const selection = () => {
     
 }
 
+const insertion = () => {
+    
+}
